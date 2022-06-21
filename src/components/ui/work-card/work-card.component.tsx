@@ -1,5 +1,5 @@
 import { Box, List, ListItem, ListItemIcon, Typography } from '@mui/material';
-import { Work } from '../../../data/constants/works.constants';
+import { Work } from '../../../data/models/work.model';
 import { StackIcon } from '../stack-icons/stack-icons.component';
 import { WorkCardContainer } from './work-card.styles';
 

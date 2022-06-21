@@ -11,7 +11,7 @@ import { useState } from 'react';
 import { Title } from '../components/ui/title/title.component';
 import { WorkCard } from '../components/ui/work-card/work-card.component';
 import { WorksIcons } from '../components/ui/works-icons/works-icons.component';
-import { Work } from '../data/constants/works.constants';
+import { Work } from '../data/models/work.model';
 import { ListItem } from '../styles/work.styles';
 import { translate } from '../utils/translate.util';
 

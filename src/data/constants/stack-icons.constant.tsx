@@ -23,7 +23,8 @@ import {
   SiFigma,
   SiExpo,
   SiExpress,
-  SiGooglemaps
+  SiGooglemaps,
+  SiNestjs
 } from 'react-icons/si';
 interface StacksIconsProps {
   [x: string]: {
@@ -105,7 +106,7 @@ export const StacksIcons: StacksIconsProps = {
     label: 'MySql'
   },
   Nest: {
-    icon: <SiNextdotjs title="Nest" />,
+    icon: <SiNestjs title="Nest" />,
     label: 'Nest'
   },
   Emotion: {

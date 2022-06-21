@@ -17,13 +17,13 @@ import {
 } from '@mui/material/';
 import { shimmerUrlEffect } from '../utils/shimmer-url-effect.util';
 import { Link } from '../components/ui/link/link.component';
-import { Project } from '../data/constants/projects.constants';
 import { StackIcon } from '../components/ui/stack-icons/stack-icons.component';
 import { Title } from '../components/ui/title/title.component';
 import { translate } from '../utils/translate.util';
 import Head from 'next/head';
 import { useRouter } from 'next/router';
 import { useState } from 'react';
+import { Project } from '../data/models/project.model';
 
 const ProjectPage = () => {
   const { push } = useRouter();
