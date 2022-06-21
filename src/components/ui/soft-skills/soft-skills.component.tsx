@@ -1,5 +1,4 @@
 import { Typography } from '@mui/material';
-import { softSkills } from '../../../data/constants/soft-skills.constant';
 
 interface SoftSkillsProps {
   skills: string[];
@@ -21,4 +20,3 @@ export const SoftSkills: React.FC<SoftSkillsProps> = ({ skills }) => {
     </>
   );
 };
-//className="flex items-center justify-center lg:mt-16 flex-wrap w-5/6 md:w-full xl:w-5/6">

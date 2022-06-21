@@ -1,4 +1,3 @@
-/* eslint-disable import/no-anonymous-default-export */
 import axios, { AxiosError } from 'axios';
 import type { NextApiRequest, NextApiResponse } from 'next';
 
