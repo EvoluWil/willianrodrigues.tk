@@ -1,4 +1,4 @@
-import { ThemeProvider } from '@mui/material';
+import { Box, ThemeProvider } from '@mui/material';
 import type { AppProps } from 'next/app';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -21,7 +21,9 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
         <NavBar />
         <Component {...pageProps} />
         <Footer />
-        <WhatsappFloatButton />
+        <Box display={{ xs: 'none', md: 'flex' }}>
+          <WhatsappFloatButton />
+        </Box>
       </AppContainer>
     </ThemeProvider>
   );

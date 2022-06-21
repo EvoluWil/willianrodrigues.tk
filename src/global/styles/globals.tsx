@@ -16,6 +16,7 @@ export const Global: React.FC = () => {
           }
         }
         body {
+          cursor: arrow;
           color: ${theme.palette.text.primary};
           background: ${theme.palette.background.default};
         }

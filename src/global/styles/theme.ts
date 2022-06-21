@@ -37,7 +37,8 @@ const theme = createTheme({
   },
   typography: {
     fontFamily: 'Poppins',
-    fontSize: 14
+    fontSize: 14,
+    allVariants: { cursor: 'inherit' }
   },
   shape: {
     borderRadius: 3

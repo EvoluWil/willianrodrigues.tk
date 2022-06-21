@@ -7,7 +7,8 @@ import {
   Container,
   Typography,
   Backdrop,
-  CircularProgress
+  CircularProgress,
+  Box
 } from '@mui/material/';
 
 import { useRouter } from 'next/router';
@@ -84,46 +85,34 @@ export const NavBar = () => {
           <AppBarComponent elevation={0} position={'sticky'}>
             <Container maxWidth="lg">
               <Toolbar disableGutters sx={{ display: 'flex' }}>
-                <Link
-                  href="/"
-                  sx={{
-                    textDecoration: 'none !important',
-                    flexGrow: 1,
-                    display: 'flex',
-                    alignItems: 'center'
-                  }}
-                  variant="button"
-                >
+                <Link href="/">
                   <img src="/logo.png" alt="WrsTech" width={'120px'} />
                 </Link>
+                <Box ml="auto">
+                  {menuItems.map(item => (
+                    <AnimatedLink
+                      onClick={() => {
+                        setBackdrop(true);
+                      }}
+                      className={route === item.link ? 'active' : 'inative'}
+                      key={item.name}
+                      href={item.link}
+                    >
+                      {item.name}
+                    </AnimatedLink>
+                  ))}
 
-                {menuItems.map(item => (
-                  <AnimatedLink
-                    onClick={() => {
-                      setBackdrop(true);
-                    }}
-                    className={route === item.link ? 'active' : 'inative'}
-                    key={item.name}
-                    color="primary"
-                    href={item.link}
-                    sx={{ display: { xs: 'none', md: 'block' } }}
-                    underline="none"
-                    variant="button"
+                  <LanguageSelector />
+
+                  <IconButton
+                    aria-label="Open Navigation"
+                    size="large"
+                    sx={{ display: { md: 'none' } }}
+                    onClick={handleDrawerToggle}
                   >
-                    {item.name}
-                  </AnimatedLink>
-                ))}
-
-                <LanguageSelector />
-
-                <IconButton
-                  aria-label="Open Navigation"
-                  size="large"
-                  sx={{ display: { md: 'none' } }}
-                  onClick={handleDrawerToggle}
-                >
-                  <Typography color="primary" className="fa fa-bars" />
-                </IconButton>
+                    <Typography color="primary" className="fa fa-bars" />
+                  </IconButton>
+                </Box>
               </Toolbar>
             </Container>
           </AppBarComponent>

@@ -11,7 +11,9 @@ import {
   ListItemIcon,
   ListItemText,
   ButtonGroup,
-  Button
+  Button,
+  Backdrop,
+  CircularProgress
 } from '@mui/material/';
 import { shimmerUrlEffect } from '../utils/shimmer-url-effect.util';
 import { Link } from '../components/ui/link/link.component';
@@ -20,13 +22,29 @@ import { StackIcon } from '../components/ui/stack-icons/stack-icons.component';
 import { Title } from '../components/ui/title/title.component';
 import { translate } from '../utils/translate.util';
 import Head from 'next/head';
+import { useRouter } from 'next/router';
+import { useState } from 'react';
 
 const ProjectPage = () => {
+  const { push } = useRouter();
+  const [backdrop, setBackdrop] = useState(false);
+
+  const handleNavigation = (path: string) => {
+    setBackdrop(true);
+    push(path);
+  };
+
   return (
     <>
       <Head>
         <title>{translate('project.titleHead')} | Willian Rodrigues</title>
       </Head>
+      <Backdrop
+        sx={{ color: '#fff', zIndex: theme => theme.zIndex.drawer + 1 }}
+        open={backdrop}
+      >
+        <CircularProgress color="inherit" />
+      </Backdrop>
       <Box component="section" id="portfolio" sx={{ pb: 8, pt: 10 }}>
         <Container>
           <Title
@@ -41,6 +59,7 @@ const ProjectPage = () => {
                 href="https://github.com/Willian-Rodrigues?tab=repositories"
                 size="large"
                 variant="contained"
+                target="_blank"
               >
                 {translate('project.button1')}
               </Button>
@@ -48,7 +67,7 @@ const ProjectPage = () => {
             <Grid item mr={{ md: 0, xs: 'auto' }}>
               <Button
                 color="primary"
-                href="/contact"
+                onClick={() => handleNavigation('/contact')}
                 size="large"
                 variant="outlined"
               >
@@ -150,16 +169,10 @@ const ProjectPage = () => {
                   >
                     <div>
                       {project.projectUrl ? (
-                        <Link
-                          gutterBottom
-                          href={project.projectUrl}
-                          rel="noopener"
-                          sx={{ display: 'inline-block' }}
-                          target="_blank"
-                          underline="hover"
-                          variant="h5"
-                        >
-                          {project.name}
+                        <Link href={project.projectUrl}>
+                          <Typography color="primary" variant="h5">
+                            {project.name}
+                          </Typography>
                         </Link>
                       ) : (
                         <Typography color="primary" variant="h5">

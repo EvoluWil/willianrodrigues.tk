@@ -1,14 +1,19 @@
-import { Box, Container, Fab, Typography } from '@mui/material/';
+import { Box, Container, Fab, Link, Typography } from '@mui/material/';
 import { useRouter } from 'next/router';
 import { translate } from '../../../utils/translate.util';
-import { NextLinkComposed } from '../../ui/link/link.component';
 import { SocialButton } from '../../ui/social-button/social-buttom.component';
 
 export const Footer = () => {
   const { route, push } = useRouter();
+
   const handleHome = () => {
     push('/');
   };
+
+  const handleTop = () => {
+    push(route);
+  };
+
   return (
     <Box
       component="footer"
@@ -34,17 +39,14 @@ export const Footer = () => {
               justifyContent="center"
             >
               <Fab
-                aria-label="Scroll back to top"
-                color="secondary"
-                component={NextLinkComposed}
+                color="primary"
                 size="small"
+                aria-label="add"
+                onClick={handleTop}
                 sx={{ mb: 2 }}
-                title="Scroll back to top"
-                to={`${route}`}
               >
                 <i className="fa fa-arrow-up" />
               </Fab>
-
               <Typography gutterBottom align="center" variant="caption">
                 WrsTech ©2022
               </Typography>

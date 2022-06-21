@@ -1,125 +1,30 @@
-/* eslint-disable react/display-name */
-/* eslint-disable jsx-a11y/anchor-has-content */
-import * as React from 'react';
-import clsx from 'clsx';
-import { useRouter } from 'next/router';
-import NextLink, { LinkProps as NextLinkProps } from 'next/link';
-import MuiLink, { LinkProps as MuiLinkProps } from '@mui/material/Link';
+import React, { ReactNode } from 'react';
+import LinkStatic from 'next/link';
+import { Link as LinkBase } from '@mui/material';
 
-interface NextLinkComposedProps
-  extends Omit<React.AnchorHTMLAttributes<HTMLAnchorElement>, 'href'>,
-    Omit<NextLinkProps, 'href' | 'as'> {
-  to: NextLinkProps['href'];
-  linkAs?: NextLinkProps['as'];
-  href?: NextLinkProps['href'];
+export interface LinkComponentProps {
+  href?: string;
+  children: ReactNode;
+  onClick?: () => void;
+  className?: string;
 }
 
-export const NextLinkComposed = React.forwardRef<
-  HTMLAnchorElement,
-  NextLinkComposedProps
->((props, ref) => {
-  const {
-    to,
-    linkAs,
-    href,
-    replace,
-    scroll,
-    passHref,
-    shallow,
-    prefetch,
-    locale,
-    ...other
-  } = props;
-
+export const Link: React.FC<LinkComponentProps> = ({
+  href,
+  children,
+  ...props
+}) => {
   return (
-    <NextLink
-      as={linkAs}
-      href={to}
-      locale={locale}
-      passHref={passHref}
-      prefetch={prefetch}
-      replace={replace}
-      scroll={scroll}
-      shallow={shallow}
+    <LinkStatic
+      href={{
+        pathname: href
+      }}
     >
-      <a ref={ref} {...other} />
-    </NextLink>
+      <LinkBase style={{ cursor: 'pointer' }} className="linkMUI" {...props}>
+        {children}
+      </LinkBase>
+    </LinkStatic>
   );
-});
+};
 
-NextLinkComposed.displayName = 'NextLinkComposed';
-
-export type LinkProps = {
-  activeClassName?: string;
-  as?: NextLinkProps['as'];
-  href: NextLinkProps['href'];
-  noLinkStyle?: boolean;
-} & Omit<NextLinkComposedProps, 'to' | 'linkAs' | 'href'> &
-  Omit<MuiLinkProps, 'href'>;
-
-export const Link = React.forwardRef<HTMLAnchorElement, LinkProps>(
-  (props, ref) => {
-    const {
-      activeClassName = 'active',
-      as: linkAs,
-      className: classNameProps,
-      href,
-      noLinkStyle,
-      ...other
-    } = props;
-
-    const router = useRouter();
-    const pathname = typeof href === 'string' ? href : href.pathname;
-    const className = clsx(classNameProps, {
-      [activeClassName]: router.pathname === pathname && activeClassName
-    });
-
-    const isExternal =
-      typeof href === 'string' &&
-      (href.indexOf('http') === 0 || href.indexOf('mailto:') === 0);
-
-    if (isExternal) {
-      if (noLinkStyle) {
-        return (
-          <a
-            ref={ref as any}
-            className={className}
-            href={href as string}
-            {...other}
-          />
-        );
-      }
-
-      return (
-        <MuiLink
-          ref={ref}
-          className={className}
-          href={href as string}
-          {...other}
-        />
-      );
-    }
-
-    if (noLinkStyle) {
-      return (
-        <NextLinkComposed
-          ref={ref as any}
-          className={className}
-          to={href}
-          {...other}
-        />
-      );
-    }
-
-    return (
-      <MuiLink
-        ref={ref}
-        className={className}
-        component={NextLinkComposed}
-        linkAs={linkAs}
-        to={href}
-        {...other}
-      />
-    );
-  }
-);
+export default Link;
