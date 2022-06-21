@@ -57,8 +57,6 @@ export type LinkProps = {
 } & Omit<NextLinkComposedProps, 'to' | 'linkAs' | 'href'> &
   Omit<MuiLinkProps, 'href'>;
 
-// A styled version of the Next.js Link component:
-// https://nextjs.org/docs/#with-link
 export const Link = React.forwardRef<HTMLAnchorElement, LinkProps>(
   (props, ref) => {
     const {
@@ -67,7 +65,6 @@ export const Link = React.forwardRef<HTMLAnchorElement, LinkProps>(
       className: classNameProps,
       href,
       noLinkStyle,
-      role, // Link don't have roles.
       ...other
     } = props;
 
