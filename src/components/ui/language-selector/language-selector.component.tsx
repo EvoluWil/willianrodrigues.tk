@@ -1,7 +1,6 @@
 import React from 'react';
 import { useRouter } from 'next/router';
 import { Button, Typography } from '@mui/material';
-import { TbLanguage } from 'react-icons/Tb';
 
 export default function LanguageSelector() {
   const router = useRouter();
@@ -17,7 +16,7 @@ export default function LanguageSelector() {
     <Button
       aria-haspopup="true"
       startIcon={
-        <TbLanguage title="language" style={{ marginRight: '-12px' }} />
+        <i className="fa fa-language" style={{ marginRight: '-12px' }} />
       }
       variant="outlined"
       onClick={handleChange}
