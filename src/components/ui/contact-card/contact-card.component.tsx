@@ -24,7 +24,9 @@ export const ContactCard: React.FC<ContactCardProps> = ({
       {icon === 'meet' ? (
         <MeetIcon title="Google-Meet" />
       ) : (
-        <Icon className={icon} variant="h1" fontSize={15} />
+        <Typography variant="h1" fontSize={15}>
+          <Icon className={icon} />
+        </Typography>
       )}
     </ContactCardContainer>
   );

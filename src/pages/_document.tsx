@@ -24,7 +24,6 @@ export default class MyDocument extends Document {
           />
           <meta content="English" name="language" />
           <meta content="Willian Rodrigues" name="author" />
-          <link href="/favicon.ico" rel="icon" />
         </Head>
         <body>
           <Main />

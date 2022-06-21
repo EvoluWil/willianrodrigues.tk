@@ -90,16 +90,18 @@ export const NavBar = () => {
                 </Link>
                 <Box ml="auto">
                   {menuItems.map(item => (
-                    <AnimatedLink
-                      onClick={() => {
-                        setBackdrop(true);
-                      }}
-                      className={route === item.link ? 'active' : 'inative'}
-                      key={item.name}
-                      href={item.link}
-                    >
-                      {item.name}
-                    </AnimatedLink>
+                    <Box display={{ xs: 'none', md: 'inline' }} key={item.name}>
+                      <AnimatedLink
+                        onClick={() => {
+                          setBackdrop(true);
+                        }}
+                        className={route === item.link ? 'active' : 'inative'}
+                        key={item.name}
+                        href={item.link}
+                      >
+                        {item.name}
+                      </AnimatedLink>
+                    </Box>
                   ))}
 
                   <LanguageSelector />
@@ -110,7 +112,9 @@ export const NavBar = () => {
                     sx={{ display: { md: 'none' } }}
                     onClick={handleDrawerToggle}
                   >
-                    <Typography color="primary" className="fa fa-bars" />
+                    <Typography color="primary">
+                      <i className="fa fa-bars" />
+                    </Typography>
                   </IconButton>
                 </Box>
               </Toolbar>

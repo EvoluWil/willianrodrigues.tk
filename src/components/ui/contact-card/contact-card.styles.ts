@@ -18,7 +18,7 @@ export const ContactCardContainer = styled(Box)`
   }
 `;
 
-export const Icon = styled(Typography)`
+export const Icon = styled('i')`
   left: 80%;
   top: 80%;
   transform: translate(-50%, -50%);
