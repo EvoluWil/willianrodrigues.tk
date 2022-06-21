@@ -6,6 +6,7 @@ import {
   ListItemButton,
   Typography
 } from '@mui/material';
+import { GetStaticProps } from 'next';
 import Head from 'next/head';
 import { useState } from 'react';
 import { Title } from '../components/ui/title/title.component';
@@ -113,3 +114,10 @@ const WorkPage = () => {
 };
 
 export default WorkPage;
+
+export const getStaticProps: GetStaticProps = async () => {
+  return {
+    props: {},
+    revalidate: 60 * 60 * 24 * 7 // 7 dias
+  };
+};

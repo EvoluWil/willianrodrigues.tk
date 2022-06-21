@@ -1,4 +1,6 @@
 import Image from 'next/image';
+import { GetStaticProps } from 'next';
+
 import {
   Box,
   Container,
@@ -242,3 +244,10 @@ const ProjectPage = () => {
 };
 
 export default ProjectPage;
+
+export const getStaticProps: GetStaticProps = async () => {
+  return {
+    props: {},
+    revalidate: 60 * 60 * 24 * 7 // 7 dias
+  };
+};

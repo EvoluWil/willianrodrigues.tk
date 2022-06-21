@@ -1,4 +1,5 @@
 import { Box, Container, Grid } from '@mui/material';
+import { GetStaticProps } from 'next';
 import Head from 'next/head';
 import { useState } from 'react';
 import { CalendlyModal } from '../components/display/modal/calendly/calendly.modal';
@@ -97,3 +98,10 @@ const Contact = () => {
 };
 
 export default Contact;
+
+export const getStaticProps: GetStaticProps = async () => {
+  return {
+    props: {},
+    revalidate: 60 * 60 * 24 * 7 // 7 dias
+  };
+};
