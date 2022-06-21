@@ -7,11 +7,13 @@ export interface LinkComponentProps {
   children: ReactNode;
   onClick?: () => void;
   className?: string;
+  textDecoration?: boolean;
 }
 
 export const Link: React.FC<LinkComponentProps> = ({
   href,
   children,
+  textDecoration = true,
   ...props
 }) => {
   return (
@@ -20,7 +22,12 @@ export const Link: React.FC<LinkComponentProps> = ({
         pathname: href
       }}
     >
-      <LinkBase style={{ cursor: 'pointer' }} className="linkMUI" {...props}>
+      <LinkBase
+        style={{ cursor: 'pointer' }}
+        className="linkMUI"
+        {...props}
+        sx={{ textDecoration: textDecoration ? 'underline' : 'none' }}
+      >
         {children}
       </LinkBase>
     </LinkStatic>
