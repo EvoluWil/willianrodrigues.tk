@@ -21,9 +21,7 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
         <NavBar />
         <Component {...pageProps} />
         <Footer />
-        <Box display={{ xs: 'none', md: 'flex' }}>
-          <WhatsappFloatButton />
-        </Box>
+        <WhatsappFloatButton />
       </AppContainer>
     </ThemeProvider>
   );

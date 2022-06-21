@@ -20,57 +20,70 @@ export const Footer = () => {
       sx={{ py: 3, bgcolor: theme => theme.palette.grey[900], mt: 'auto' }}
     >
       <Container>
-        <Box alignItems="center" display="flex" flexDirection="column">
+        <Box
+          alignItems="center"
+          display="flex"
+          flexDirection={{ md: 'row', xs: 'column' }}
+          gap={2}
+          justifyContent="space-between"
+        >
+          <img onClick={handleHome} src="/logo.png" alt="WrsTech" width="20%" />
+          <Box
+            display={{ md: 'flex', xs: 'none' }}
+            flexDirection="column"
+            alignItems="center"
+            justifyContent="center"
+          >
+            <Fab
+              color="primary"
+              size="small"
+              aria-label="add"
+              onClick={handleTop}
+              sx={{ mb: 2 }}
+            >
+              <i className="fa fa-arrow-up" />
+            </Fab>
+            <Typography gutterBottom align="center" variant="caption">
+              WrsTech ©2022
+            </Typography>
+          </Box>
           <Box
             alignItems="center"
             display="flex"
-            justifyContent="space-between"
+            flexDirection="column"
+            width="20%"
           >
-            <img
-              onClick={handleHome}
-              src="/logo.png"
-              alt="WrsTech"
-              width="20%"
-            />
-            <Box
-              display="flex"
-              flexDirection="column"
-              alignItems="center"
-              justifyContent="center"
-            >
-              <Fab
-                color="primary"
-                size="small"
-                aria-label="add"
-                onClick={handleTop}
-                sx={{ mb: 2 }}
-              >
-                <i className="fa fa-arrow-up" />
-              </Fab>
-              <Typography gutterBottom align="center" variant="caption">
-                WrsTech ©2022
-              </Typography>
+            <Typography variant={'h6'}>{translate('footer.follow')}</Typography>
+            <Box alignItems="center" display="flex" gap={1}>
+              <SocialButton
+                url="https://www.linkedin.com/in/willianrsilva/"
+                icon="linkedin-square"
+              />
+              <SocialButton
+                url="https://github.com/Willian-Rodrigues"
+                icon="github"
+              />
             </Box>
-            <Box
-              alignItems="center"
-              display="flex"
-              flexDirection="column"
-              width="20%"
+          </Box>
+          <Box
+            display={{ md: 'none', xs: 'flex' }}
+            flexDirection="column"
+            alignItems="center"
+            justifyContent="center"
+          >
+            <Typography gutterBottom align="center" variant="caption">
+              WrsTech ©2022
+            </Typography>
+
+            <Fab
+              color="primary"
+              size="small"
+              aria-label="add"
+              onClick={handleTop}
+              sx={{ mt: 2 }}
             >
-              <Typography variant={'h6'}>
-                {translate('footer.follow')}
-              </Typography>
-              <Box alignItems="center" display="flex" gap={1}>
-                <SocialButton
-                  url="https://www.linkedin.com/in/willianrsilva/"
-                  icon="linkedin-square"
-                />
-                <SocialButton
-                  url="https://github.com/Willian-Rodrigues"
-                  icon="github"
-                />
-              </Box>
-            </Box>
+              <i className="fa fa-arrow-up" />
+            </Fab>
           </Box>
         </Box>
       </Container>
