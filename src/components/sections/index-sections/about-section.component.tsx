@@ -4,6 +4,7 @@ import { Typewriter } from '../../ui/typewriter/typewriter.component';
 import { Title } from '../../ui/title/title.component';
 import { SoftSkills } from '../../ui/soft-skills/soft-skills.component';
 import { translate } from '../../../utils/translate.util';
+import { CloudIcons } from '../../ui/cloud-icons/cloud-icons.dynamic';
 
 export const About = () => {
   return (
@@ -70,7 +71,7 @@ export const About = () => {
                 flexWrap: 'wrap'
               }}
             >
-              <SkillsIcons />
+              <CloudIcons />
             </Grid>
           </Grid>
         </Container>

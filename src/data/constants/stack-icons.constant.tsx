@@ -47,11 +47,11 @@ export const StacksIcons: StacksIconsProps = {
   },
   Next: {
     icon: <SiNextdotjs title="NextJS" />,
-    label: 'NextJS'
+    label: 'Nextdotjs'
   },
   Node: {
     icon: <SiNodedotjs title="Node" />,
-    label: 'Node'
+    label: 'Nodedotjs'
   },
   Postgres: {
     icon: <SiPostgresql title="PostgreSQL" />,
@@ -67,7 +67,7 @@ export const StacksIcons: StacksIconsProps = {
   },
   Mui: {
     icon: <SiMaterialui title="Material UI" />,
-    label: 'Material UI'
+    label: 'MaterialUI'
   },
   Bootstrap: {
     icon: <SiBootstrap title="Bootstrap" />,
@@ -87,15 +87,15 @@ export const StacksIcons: StacksIconsProps = {
   },
   StyledComponents: {
     icon: <SiStyledcomponents title="Styled-Components" />,
-    label: 'Styled-Components'
+    label: 'StyledComponents'
   },
   ReactNative: {
     icon: <SiReact title="React-Native" />,
-    label: 'React-Native'
+    label: 'vercel'
   },
   JWT: {
     icon: <SiJsonwebtokens title="Json-web-tokens" />,
-    label: 'Json-web-tokens'
+    label: 'Jsonwebtokens'
   },
   Prisma: {
     icon: <SiPrisma title="Prisma" />,
@@ -107,15 +107,15 @@ export const StacksIcons: StacksIconsProps = {
   },
   Nest: {
     icon: <SiNestjs title="Nest" />,
-    label: 'Nest'
+    label: 'Nestjs'
   },
   Emotion: {
     icon: <SiStyledcomponents title="Emotion-styled" />,
-    label: 'Emotion-styled'
+    label: 'css3'
   },
   Rxjs: {
     icon: <SiReactivex title="Rxjs" />,
-    label: 'Rxjs'
+    label: 'Reactivex'
   },
   Ios: {
     icon: <SiIos title="Ios" />,
