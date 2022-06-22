@@ -6,7 +6,7 @@ export const whatsapp = {
   },
   en: {
     whatsapp: {
-      message: 'Olá! como posso te ajudar'
+      message: 'Hello! how can I help you'
     }
   }
 };

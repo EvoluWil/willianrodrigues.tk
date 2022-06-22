@@ -5,9 +5,9 @@ export const home = {
       heroData: {
         greetings: 'Olá, sou',
         name: 'Willian Rodrigues',
-        role: 'Desenvolvedor Web/Mobile full stack',
+        role: 'Desenvolvedor Web/Mobile fullstack',
         paragraph:
-          'Desenvolvo aplicações web e mobile, com interfaces simples, elegantes e intuitivas, utilizando as melhores praticas e tecnologias disponiveis.✨',
+          'Desenvolvo aplicações web e mobile, com interfaces simples, elegantes e intuitivas, utilizando as melhores praticas e tecnologias disponíveis.✨',
         button1: 'Meus projetos',
         button2: 'Fale comigo'
       },
@@ -15,21 +15,21 @@ export const home = {
         hardSkills: {
           title: 'Habilidades Técnicas',
           description:
-            'Desenvolvimento inteligente, de aplicações robustas e auto-gerenciaveis, com as tecnologias mais utilizadas atualmente no desenvolvimento web/mobile.',
-          Typewriter: ['Imaginar.', 'Prototipar.', 'Trabalhar.', 'Desenvolver.']
+            'Desenvolvimento inteligente, de aplicações robustas e auto-gerenciáveis, com as tecnologias mais utilizadas atualmente no desenvolvimento web/mobile.',
+          Typewriter: ['Imaginar.', 'Desenhar.', 'Trabalhar.', 'Desenvolver.']
         },
         softSkills: {
           title: 'Habilidades Pessoais',
           description1:
-            'A experiência em liderança de equipe e suporte ao cliente, complementa a visão de negócio e o entendimento de gerar valor ao negócio.',
+            'Minha experiência em liderança de equipe e suporte ao cliente, complementa minha visão de negócio e o entendimento de valor para o negócio.',
           description2:
-            'Gerenciamento de tarefas baseado em metologias ageis (scrum), e forte trabalho coletivo me torna uma peça importante em qualquer equipe.',
+            'Gerenciamento de tarefas baseado em metologias ágeis (scrum), e forte trabalho coletivo me torna uma peça importante em qualquer equipe.',
           skills: [
             'Colaboração.',
             'Adaptabilidade.',
             'Solução.',
             'Emocional.',
-            'Creatividade.',
+            'Criatividade.',
             'Inteligencia.'
           ]
         }
@@ -38,34 +38,36 @@ export const home = {
   },
   en: {
     home: {
-      title: 'Inicio',
+      title: 'Home',
       heroData: {
-        greetings: 'Olá, sou',
+        greetings: "Hello, i'm",
         name: 'Willian Rodrigues',
-        role: 'Desenvolvedor Web/Mobile full stack',
+        role: 'Fullstack Developer Web/Mobile',
         paragraph:
-          'Desenvolvo aplicações web e mobile, com interfaces simples, elegantes e intuitivas, utilizando as melhores praticas e tecnologias disponiveis.✨',
-        button1: 'Meus projetos',
-        button2: 'Fale comigo'
+          'I develop web and mobile applications, with simple, elegant and intuitive interfaces, using the best practices and technologies available.✨',
+        button1: 'My projects',
+        button2: 'Contact me'
       },
       aboutData: {
         hardSkills: {
-          title: 'Habilidades Técnicas',
+          title: 'Hard Skills',
           description:
-            'Desenvolvimento inteligente, de aplicações robustas e auto-gerenciaveis, com as tecnologias mais utilizadas atualmente no desenvolvimento web/mobile.',
-          Typewriter: ['Imaginar.', 'Prototipar.', 'Trabalhar.', 'Desenvolver.']
+            'Intelligent development of robust and self-managing applications, with the technologies most used today in web/mobile development.',
+          Typewriter: ['Think.', 'Design.', 'Code.', 'Build.']
         },
         softSkills: {
-          title: 'Habilidades Pessoais',
-          description:
-            'A experiência em liderança de equipe e suporte ao cliente, complementa a visão de negócio e o entendimento de gerar valor ao negócio Gerenciamento de tarefas baseado em metologias ageis (scrum), e forte trabalho coletivo me torna uma peça importante em qualquer equipe.',
+          title: 'Soft Skills',
+          description1:
+            'My experience in team leadership and customer support complements my business acumen and understanding of product value.',
+          description2:
+            'Task management based on agile methodologies (scrum), and strong collective work makes me an important part of any team.',
           skills: [
-            'Colaboração.',
-            'Adaptabilidade.',
-            'Solução.',
-            'Emocional.',
-            'Creatividade.',
-            'Inteligencia.'
+            'Collaboration.',
+            'Adaptability.',
+            'Solution.',
+            'Emotional.',
+            'Creativity.',
+            'Intelligence.'
           ]
         }
       }

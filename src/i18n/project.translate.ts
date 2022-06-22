@@ -4,7 +4,9 @@ export const project = {
       titleHead: 'Projetos',
       title: 'Meus Projetos',
       subtitle:
-        'Aqui exponho meus principais projetos academicos e para estudo que estão "Open Source" no meu github',
+        'Aqui exponho meus principais projetos acadêmicos e pessoais que estão "Open Source" no github',
+      repository: 'Repositório',
+      page: 'Ver',
       button1: 'Ver no GitHub',
       button2: 'Fale comigo',
       projects: [
@@ -14,11 +16,12 @@ export const project = {
           src: '/images/projects/target.png',
           projectUrl: 'https://targetcrm.vercel.app/',
           repoUrl: 'https://github.com/vinicius-hso/api-sem3-target-crm',
-          description: `TARGET - Business Solutions é a proposta de solução oferecida pela equipe Cluster 8 em forma de aplicação web. A aplicação finalizada deve:`,
+          description: `TARGET é um projeto acadêmico, onde desenvolvemos uma Aplicação Web de CRM (Customer Relationship Management) para organização dos processos comerciais, oferecendo suporte adequado às áreas de vendas e negócios para a empresa parceira da universidade (Ionic Heath). Minha atuação neste projeto foi como TechLead Frontend, onde fiquei responsável pelo design, tecnologias, subdivisão de tarefas e principal desenvolvedor frontend`,
           tasks: [
-            'Pixel perfect design',
-            'Absolute positioning',
-            'Custom classes'
+            'Realizar o monitoramento e acompanhamento de negociações',
+            'Importação de arquivos com contatos',
+            'Design responsivo',
+            'Visualizar as negociações em um Dashboard'
           ],
           stacks: [
             'React',
@@ -27,20 +30,24 @@ export const project = {
             'StyledComponents',
             'Node',
             'Postgres',
-            'Figma'
+            'Figma',
+            'Mui'
           ]
         },
         {
           id: 2,
           name: 'eSoja',
           src: '/images/projects/esoja.png',
+          projectUrl:
+            'https://firebasestorage.googleapis.com/v0/b/esoja-345711.appspot.com/o/app-release.apk?alt=media&token=51dbad93-cbbd-4cf2-a889-aad05425eddd',
           repoUrl:
             'https://github.com/cluster-8/esoja-mobile/tree/mobile/frontend',
-          description: `TARGET - Business Solutions é a proposta de solução oferecida pela equipe Cluster 8 em forma de aplicação web. A aplicação finalizada deve:`,
+          description: `eSoja é um projeto acadêmico, para atender a empresa parceira (Visiona), onde desenvolvemos um aplicativo colaborativo para produtores rurais, o aplicativo fornece informações sobre produtividade, mercado, clima e estatísticas regionais para auxiliar o produtor nas tomadas de decisões. Minha atuação foi como TechLead Frontend, fui responsável pelo desenvolvimento frontend (mobile), definição de tecnologias, pesquisa de API para consumo e login social (Google e Facebook)`,
           tasks: [
-            'Pixel perfect design',
-            'Absolute positioning',
-            'Custom classes'
+            'Previsão do Tempo',
+            'Estatísticas do usuário e comparação regional',
+            'Informações sobre o mercado e cotações',
+            'Login social com Google e Facebook'
           ],
           stacks: [
             'ReactNative',
@@ -49,40 +56,47 @@ export const project = {
             'StyledComponents',
             'Node',
             'Postgres',
+            'Firebase',
             'Prisma',
             'Figma',
             'Expo',
-            'GoogleMaps'
+            'GoogleMaps',
+            'Facebook',
+            'Google'
           ]
         },
         {
           id: 3,
-          name: 'GitHub',
+          name: 'GitHub-Clone',
           src: '/images/projects/github.png',
           projectUrl: 'https://githubapi-theta.vercel.app/',
           repoUrl: 'https://github.com/Willian-Rodrigues/githubapi',
-          description: `TARGET - Business Solutions é a proposta de solução oferecida pela equipe Cluster 8 em forma de aplicação web. A aplicação finalizada deve:`,
+          description: `GitHub é um projeto pessoal, produzido para gerar aprendizado, consiste em uma aplicação clone do github utilizando a api do oficial do github e login social com o próprio github.`,
           tasks: [
-            'Pixel perfect design',
-            'Absolute positioning',
-            'Custom classes'
+            'Visualização de atividades',
+            'Visualização de repositórios',
+            'Login com github oauth',
+            'Tema personalizado'
           ],
-          stacks: ['React', 'Next', 'TypeScript', 'StyledComponents', 'Figma']
+          stacks: [
+            'React',
+            'Next',
+            'TypeScript',
+            'StyledComponents',
+            'Figma',
+            'Github'
+          ]
         },
         {
           id: 4,
-          name: 'Query Builder',
+          name: 'Nest Prisma Query Builder Interface',
           src: '/images/projects/query-builder.png',
           projectUrl:
             'https://www.npmjs.com/package/nestjs-prisma-querybuilder-interface',
           repoUrl:
             'https://github.com/Willian-Rodrigues/nestjs-prisma-querybuilder-interface',
-          description: `TARGET - Business Solutions é a proposta de solução oferecida pela equipe Cluster 8 em forma de aplicação web. A aplicação finalizada deve:`,
-          tasks: [
-            'Pixel perfect design',
-            'Absolute positioning',
-            'Custom classes'
-          ],
+          description: `O nest-prisma-querybuilder-interface é uma interface frontend para query-strings, a aplicação é um pacote NPM (Node Package Manager), para auxiliar outros desenvolvedores no uso de query em url`,
+          tasks: ['Código aberto', 'Colaboração'],
           stacks: ['TypeScript', 'NPM']
         }
       ]
@@ -90,12 +104,14 @@ export const project = {
   },
   en: {
     project: {
-      titleHead: 'Projetos',
-      title: 'Meus Projetos',
+      titleHead: 'Projects',
+      title: 'My Projects',
       subtitle:
-        'Aqui exponho meus principais projetos academicos e para estudo que estão "Open Source" no meu github',
-      button1: 'Ver no GitHub',
-      button2: 'Fale comigo',
+        'Here I expose my main academic and personal projects that are "Open Source" on github',
+      repository: 'Repository',
+      page: 'Live',
+      button1: 'View on GitHub',
+      button2: 'Contact me',
       projects: [
         {
           id: 1,
@@ -103,11 +119,12 @@ export const project = {
           src: '/images/projects/target.png',
           projectUrl: 'https://targetcrm.vercel.app/',
           repoUrl: 'https://github.com/vinicius-hso/api-sem3-target-crm',
-          description: `TARGET - Business Solutions é a proposta de solução oferecida pela equipe Cluster 8 em forma de aplicação web. A aplicação finalizada deve:`,
+          description: `TARGET is an academic project, where we developed a CRM (Customer Relationship Management) Web Application to organize business processes, offering adequate support to the commercial and business areas of the university's partner company (Ionic Heath). My role in this project was as TechLead Frontend, where I was responsible for the design, technologies, subdivision of tasks and main frontend developer.`,
           tasks: [
-            'Pixel perfect design',
-            'Absolute positioning',
-            'Custom classes'
+            'Perform monitoring and tracking of trades',
+            'Importing files with contacts',
+            'Responsive design',
+            'View trades in a Dashboard'
           ],
           stacks: [
             'React',
@@ -116,21 +133,24 @@ export const project = {
             'StyledComponents',
             'Node',
             'Postgres',
-            'Figma'
+            'Figma',
+            'Mui'
           ]
         },
         {
           id: 2,
           name: 'eSoja',
           src: '/images/projects/esoja.png',
-          projectUrl: '',
+          projectUrl:
+            'https://firebasestorage.googleapis.com/v0/b/esoja-345711.appspot.com/o/app-release.apk?alt=media&token=51dbad93-cbbd-4cf2-a889-aad05425eddd',
           repoUrl:
             'https://github.com/cluster-8/esoja-mobile/tree/mobile/frontend',
-          description: `TARGET - Business Solutions é a proposta de solução oferecida pela equipe Cluster 8 em forma de aplicação web. A aplicação finalizada deve:`,
+          description: `eSoja is an academic project, to serve the partner company (Visiona), where we developed a collaborative application for rural producers, the application provides information on productivity, market, climate and regional statistics to assist the producer in decision making. My role was as TechLead Frontend, I was responsible for frontend development (mobile), definition of technologies, API research for consumption and social login (Google and Facebook)`,
           tasks: [
-            'Pixel perfect design',
-            'Absolute positioning',
-            'Custom classes'
+            'Weather forecast',
+            'User stats and regional comparison',
+            'Market information and Quotations',
+            'Social login with Google and Facebook'
           ],
           stacks: [
             'ReactNative',
@@ -139,40 +159,47 @@ export const project = {
             'StyledComponents',
             'Node',
             'Postgres',
+            'Firebase',
             'Prisma',
             'Figma',
             'Expo',
-            'GoogleMaps'
+            'GoogleMaps',
+            'Facebook',
+            'Google'
           ]
         },
         {
           id: 3,
-          name: 'GitHub',
+          name: 'GitHub-Clone',
           src: '/images/projects/github.png',
           projectUrl: 'https://githubapi-theta.vercel.app/',
           repoUrl: 'https://github.com/Willian-Rodrigues/githubapi',
-          description: `TARGET - Business Solutions é a proposta de solução oferecida pela equipe Cluster 8 em forma de aplicação web. A aplicação finalizada deve:`,
+          description: `GitHub is a personal project, produced to generate learning, it consists of a github clone application using the official github api and social login with github itself.`,
           tasks: [
-            'Pixel perfect design',
-            'Absolute positioning',
-            'Custom classes'
+            'Activity view',
+            'Repository view',
+            'Login with github oauth',
+            'Custom theme'
           ],
-          stacks: ['React', 'Next', 'TypeScript', 'StyledComponents', 'Figma']
+          stacks: [
+            'React',
+            'Next',
+            'TypeScript',
+            'StyledComponents',
+            'Figma',
+            'Github'
+          ]
         },
         {
           id: 4,
-          name: 'Query Builder',
+          name: 'Nest Prisma Query Builder Interface',
           src: '/images/projects/query-builder.png',
           projectUrl:
             'https://www.npmjs.com/package/nestjs-prisma-querybuilder-interface',
           repoUrl:
             'https://github.com/Willian-Rodrigues/nestjs-prisma-querybuilder-interface',
-          description: `TARGET - Business Solutions é a proposta de solução oferecida pela equipe Cluster 8 em forma de aplicação web. A aplicação finalizada deve:`,
-          tasks: [
-            'Pixel perfect design',
-            'Absolute positioning',
-            'Custom classes'
-          ],
+          description: `The nest-prisma-querybuilder-interface is a frontend interface for query-strings, the application is an NPM package (Node Package Manager), to assist other developers in the use of url query`,
+          tasks: ['Open Source', 'Collaboration'],
           stacks: ['TypeScript', 'NPM']
         }
       ]
