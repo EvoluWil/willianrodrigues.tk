@@ -1,5 +1,4 @@
 import { Container, Typography, Grid, Box } from '@mui/material/';
-import { SkillsIcons } from '../../ui/skills-icons/skill-icons.component';
 import { Typewriter } from '../../ui/typewriter/typewriter.component';
 import { Title } from '../../ui/title/title.component';
 import { SoftSkills } from '../../ui/soft-skills/soft-skills.component';
