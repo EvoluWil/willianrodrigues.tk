@@ -1,19 +1,17 @@
 import React, { ReactNode } from 'react';
 import LinkStatic from 'next/link';
-import { Link as LinkBase } from '@mui/material';
+import { LinkStyled } from './link.styles';
 
 export interface LinkComponentProps {
   href?: string;
   children: ReactNode;
   onClick?: () => void;
   className?: string;
-  textDecoration?: boolean;
 }
 
 export const Link: React.FC<LinkComponentProps> = ({
   href,
   children,
-  textDecoration = true,
   ...props
 }) => {
   return (
@@ -22,14 +20,9 @@ export const Link: React.FC<LinkComponentProps> = ({
         pathname: href
       }}
     >
-      <LinkBase
-        style={{ cursor: 'pointer' }}
-        className="linkMUI"
-        {...props}
-        sx={{ textDecoration: textDecoration ? 'underline' : 'none' }}
-      >
+      <LinkStyled style={{ cursor: 'pointer' }} {...props}>
         {children}
-      </LinkBase>
+      </LinkStyled>
     </LinkStatic>
   );
 };

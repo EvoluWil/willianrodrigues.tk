@@ -7,7 +7,7 @@ export const AppBarComponent = styled(AppBar)`
 
 export const AnimatedLink = styled(Link)`
   padding: 12px 15px;
-  text-decoration: none;
+  text-decoration: none !important;
   position: relative;
 
   &::before {

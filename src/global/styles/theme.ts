@@ -38,7 +38,7 @@ const theme = createTheme({
   typography: {
     fontFamily: 'Poppins',
     fontSize: 14,
-    allVariants: { cursor: 'inherit' }
+    allVariants: { cursor: 'default' }
   },
   shape: {
     borderRadius: 3
@@ -47,7 +47,8 @@ const theme = createTheme({
     MuiButton: {
       styleOverrides: {
         root: {
-          textTransform: 'none'
+          textTransform: 'none',
+          cursor: 'pointer'
         }
       },
       variants: [
