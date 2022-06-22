@@ -10,11 +10,19 @@ export const ContactCardContainer = styled(Box)`
   padding: ${({ theme }) => theme.spacing(4)};
   width: 300px;
   height: 300px;
-  cursor: pointer;
 
   ${({ theme }) => theme.breakpoints.down('md')} {
     width: 220px;
     height: 220px;
+  }
+
+  * {
+    cursor: pointer !important;
+  }
+  cursor: pointer;
+  transition: background-color 0.5s;
+  &:hover {
+    background-color: ${({ theme }) => theme.palette.grey[900]};
   }
 `;
 
