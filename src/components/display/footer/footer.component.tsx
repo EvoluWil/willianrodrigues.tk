@@ -27,7 +27,13 @@ export const Footer = () => {
           gap={2}
           justifyContent="space-between"
         >
-          <img onClick={handleHome} src="/logo.png" alt="WrsTech" width="20%" />
+          <img
+            onClick={handleHome}
+            src="/logo.png"
+            alt="WrsTech"
+            width="20%"
+            style={{ cursor: 'pointer' }}
+          />
           <Box
             display={{ md: 'flex', xs: 'none' }}
             flexDirection="column"
@@ -39,7 +45,7 @@ export const Footer = () => {
               size="small"
               aria-label="add"
               onClick={handleTop}
-              sx={{ mb: 2 }}
+              sx={{ mb: 2, cursor: 'pointer' }}
             >
               <i className="fa fa-arrow-up" />
             </Fab>
@@ -51,7 +57,7 @@ export const Footer = () => {
             alignItems="center"
             display="flex"
             flexDirection="column"
-            width="20%"
+            width={{ md: '20%', xs: '100%' }}
           >
             <Typography variant={'h6'}>{translate('footer.follow')}</Typography>
             <Box alignItems="center" display="flex" gap={1}>
@@ -80,7 +86,7 @@ export const Footer = () => {
               size="small"
               aria-label="add"
               onClick={handleTop}
-              sx={{ mt: 2 }}
+              sx={{ mt: 2, cursor: 'pointer' }}
             >
               <i className="fa fa-arrow-up" />
             </Fab>

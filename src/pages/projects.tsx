@@ -140,7 +140,7 @@ const ProjectPage = () => {
                           startIcon={<i className="fa fa-github" />}
                           target="_blank"
                         >
-                          Repo
+                          {translate('project.repository')}
                         </Button>
                         {!!project.projectUrl && (
                           <Button
@@ -151,7 +151,7 @@ const ProjectPage = () => {
                             startIcon={<i className="fa fa-eye" />}
                             target="_blank"
                           >
-                            Live
+                            {translate('project.page')}
                           </Button>
                         )}
                       </ButtonGroup>
@@ -172,7 +172,11 @@ const ProjectPage = () => {
                     <div>
                       {project.projectUrl ? (
                         <Link href={project.projectUrl}>
-                          <Typography color="primary" variant="h5">
+                          <Typography
+                            color="primary"
+                            variant="h5"
+                            sx={{ cursor: 'pointer' }}
+                          >
                             {project.name}
                           </Typography>
                         </Link>

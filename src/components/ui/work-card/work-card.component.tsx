@@ -5,9 +5,15 @@ import { WorkCardContainer } from './work-card.styles';
 
 interface WorkCardProps {
   work: Work;
+  responsibilitiesLabel: string;
+  technologiesLabel: string;
 }
 
-export const WorkCard: React.FC<WorkCardProps> = ({ work }) => {
+export const WorkCard: React.FC<WorkCardProps> = ({
+  work,
+  responsibilitiesLabel,
+  technologiesLabel
+}) => {
   return (
     <WorkCardContainer>
       <Typography color="primary" variant="h4">
@@ -23,7 +29,7 @@ export const WorkCard: React.FC<WorkCardProps> = ({ work }) => {
         <Typography variant="caption">{work.period}</Typography>
       </Typography>
       <Typography color="primary" variant="h6" sx={{ mt: 4 }}>
-        Responsabilidades
+        {responsibilitiesLabel}
       </Typography>
       <List>
         {work.tasks.map(task => (
@@ -37,8 +43,8 @@ export const WorkCard: React.FC<WorkCardProps> = ({ work }) => {
           </ListItem>
         ))}
       </List>
-      <Typography color="primary" variant="h6" sx={{ mt: 4 }}>
-        Tecnologias
+      <Typography color="primary" variant="h6" sx={{ mt: 4, mb: 2 }}>
+        {technologiesLabel}
       </Typography>
       <Box display="flex" gap={1} sx={{ flexWrap: 'wrap' }}>
         {work.stacks.map(stack => (

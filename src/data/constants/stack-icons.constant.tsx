@@ -24,7 +24,12 @@ import {
   SiExpo,
   SiExpress,
   SiGooglemaps,
-  SiNestjs
+  SiNestjs,
+  SiFacebook,
+  SiGoogle,
+  SiGithub,
+  SiGit,
+  SiGitlab
 } from 'react-icons/si';
 interface StacksIconsProps {
   [x: string]: {
@@ -142,7 +147,27 @@ export const StacksIcons: StacksIconsProps = {
     label: 'Expo'
   },
   GoogleMaps: {
-    icon: <SiGooglemaps title="GoogleMaps" color="#4285F4" />,
+    icon: <SiGooglemaps title="Google-Maps" color="#4285F4" />,
     label: 'GoogleMaps'
+  },
+  Google: {
+    icon: <SiGoogle title="Google-Auth" color="#4285F4" />,
+    label: 'Google'
+  },
+  Facebook: {
+    icon: <SiFacebook title="Facebook-Auth" color="#4285F4" />,
+    label: 'Facebook'
+  },
+  Github: {
+    icon: <SiGithub title="GitHub" color="#4285F4" />,
+    label: 'Github'
+  },
+  GitLab: {
+    icon: <SiGitlab title="GitLab" color="#4285F4" />,
+    label: 'GitLab'
+  },
+  Git: {
+    icon: <SiGit title="Git" color="#4285F4" />,
+    label: 'Git'
   }
 };

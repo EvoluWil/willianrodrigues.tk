@@ -1,9 +1,11 @@
 import {
   Box,
+  Button,
   Container,
   Grid,
   List,
   ListItemButton,
+  ListItemText,
   Typography
 } from '@mui/material';
 import { GetStaticProps } from 'next';
@@ -75,22 +77,27 @@ const WorkPage = () => {
               bgcolor: theme => theme.palette.grey[900]
             }}
           >
-            <Grid item xs={12} md={6} component="section" my="auto">
-              <List>
-                {translate('work.works').map((work: Work) => (
-                  <ListItem
-                    key={work.id}
-                    selected={work.id === selectedWork.id}
-                    onClick={() => setSelectedWork(work)}
-                  >
-                    <ListItemButton>
-                      <Typography color="primary" mx="auto">
-                        {work.name}
-                      </Typography>
-                    </ListItemButton>
-                  </ListItem>
-                ))}
-              </List>
+            <Grid
+              item
+              xs={12}
+              md={6}
+              component="section"
+              display="flex"
+              flexDirection="column"
+              justifyContent="space-evenly"
+            >
+              {translate('work.works').map((work: Work) => (
+                <Button
+                  key={work.id}
+                  variant="outlined"
+                  fullWidth
+                  size="large"
+                  sx={{ my: 1 }}
+                  onClick={() => setSelectedWork(work)}
+                >
+                  {work.name}
+                </Button>
+              ))}
             </Grid>
             <Grid
               item
@@ -104,7 +111,11 @@ const WorkPage = () => {
                 flexWrap: 'wrap'
               }}
             >
-              <WorkCard work={selectedWork} />
+              <WorkCard
+                work={selectedWork}
+                responsibilitiesLabel={translate('work.responsibilities')}
+                technologiesLabel={translate('work.technologies')}
+              />
             </Grid>
           </Grid>
         </Container>

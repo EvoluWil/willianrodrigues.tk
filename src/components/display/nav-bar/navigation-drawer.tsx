@@ -40,12 +40,7 @@ export default function NavigationDrawer(props: NavigationDrawerProps) {
       <Divider />
       <List>
         {menuItems.map(item => (
-          <Link
-            key={item.name}
-            href={item.link}
-            onClick={onClose}
-            textDecoration={false}
-          >
+          <Link key={item.name} href={item.link} onClick={onClose}>
             <Box
               display="flex"
               alignItems="center"
