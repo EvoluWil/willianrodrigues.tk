@@ -4,8 +4,7 @@ import {
   Container,
   Grid,
   List,
-  ListItemButton,
-  ListItemText,
+  ListItem,
   Typography
 } from '@mui/material';
 import { GetStaticProps } from 'next';
@@ -15,7 +14,6 @@ import { Title } from '../components/ui/title/title.component';
 import { WorkCard } from '../components/ui/work-card/work-card.component';
 import { WorksIcons } from '../components/ui/works-icons/works-icons.component';
 import { Work } from '../data/models/work.model';
-import { ListItem } from '../styles/work.styles';
 import { translate } from '../utils/translate.util';
 
 const WorkPage = () => {
@@ -77,27 +75,33 @@ const WorkPage = () => {
               bgcolor: theme => theme.palette.grey[900]
             }}
           >
-            <Grid
-              item
-              xs={12}
-              md={6}
-              component="section"
-              display="flex"
-              flexDirection="column"
-              justifyContent="space-evenly"
-            >
-              {translate('work.works').map((work: Work) => (
-                <Button
-                  key={work.id}
-                  variant="outlined"
-                  fullWidth
-                  size="large"
-                  sx={{ my: 1 }}
-                  onClick={() => setSelectedWork(work)}
-                >
-                  {work.name}
-                </Button>
-              ))}
+            <Grid item xs={12} md={6} component="section">
+              <List
+                sx={{
+                  display: 'flex',
+                  height: '100%',
+                  flexDirection: 'column',
+                  justifyContent: 'space-evenly'
+                }}
+              >
+                {translate('work.works').map((work: Work) => (
+                  <ListItem
+                    key={work.id}
+                    selected={work.id === selectedWork.id}
+                    disablePadding
+                    sx={{ my: 1 }}
+                  >
+                    <Button
+                      variant="outlined"
+                      fullWidth
+                      size="large"
+                      onClick={() => setSelectedWork(work)}
+                    >
+                      {work.name}
+                    </Button>
+                  </ListItem>
+                ))}
+              </List>
             </Grid>
             <Grid
               item
