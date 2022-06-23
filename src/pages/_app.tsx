@@ -4,6 +4,7 @@ import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { Footer } from '../components/display/footer/footer.component';
 import { NavBar } from '../components/display/nav-bar/nav-bar.component';
+import { CursorFollow } from '../components/ui/cursor-follow/cursor-follow.component';
 import { WhatsappFloatButton } from '../components/ui/whatsapp-float/whatsapp-float.dynamic';
 import { Global } from '../global/styles/globals';
 import theme from '../global/styles/theme';
@@ -22,6 +23,7 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
         <Component {...pageProps} />
         <Footer />
         <WhatsappFloatButton />
+        <CursorFollow />
       </AppContainer>
     </ThemeProvider>
   );
