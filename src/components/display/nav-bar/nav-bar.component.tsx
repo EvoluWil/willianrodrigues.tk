@@ -14,7 +14,7 @@ import {
 import { useRouter } from 'next/router';
 
 import NavigationDrawer from './navigation-drawer';
-import LanguageSelector from '../../ui/language-selector/language-selector.component';
+import { LanguageSelector } from '../../ui/language-selector/language-selector.component';
 import { Link } from '../../ui/link/link.component';
 import { AnimatedLink, AppBarComponent } from './nav-bar.style';
 import { translate } from '../../../utils/translate.util';
@@ -89,22 +89,27 @@ export const NavBar = () => {
                   <img src="/logo.png" alt="WrsTech" width={'120px'} />
                 </Link>
                 <Box ml="auto">
-                  {menuItems.map(item => (
-                    <Box display={{ xs: 'none', md: 'inline' }} key={item.name}>
-                      <AnimatedLink
-                        onClick={() => {
-                          setBackdrop(true);
-                        }}
-                        className={route === item.link ? 'active' : 'inative'}
+                  <Box display="flex" alignItems="center">
+                    {menuItems.map(item => (
+                      <Box
+                        display={{ xs: 'none', md: 'inline' }}
                         key={item.name}
-                        href={item.link}
                       >
-                        {item.name}
-                      </AnimatedLink>
-                    </Box>
-                  ))}
+                        <AnimatedLink
+                          onClick={() => {
+                            setBackdrop(true);
+                          }}
+                          className={route === item.link ? 'active' : 'inative'}
+                          key={item.name}
+                          href={item.link}
+                        >
+                          {item.name}
+                        </AnimatedLink>
+                      </Box>
+                    ))}
 
-                  <LanguageSelector />
+                    <LanguageSelector />
+                  </Box>
 
                   <IconButton
                     aria-label="Open Navigation"
