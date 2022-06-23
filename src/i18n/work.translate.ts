@@ -1,7 +1,7 @@
 export const work = {
   pt: {
     work: {
-      titleHead: 'Experiência',
+      titleHead: 'Serviços',
       title: 'Experiência Profissional',
       subtitle:
         'Prestação de serviços para empresas ja consolidadas no mercado, com desenvolvimento de plataformas completas.',
@@ -112,7 +112,7 @@ export const work = {
   },
   en: {
     work: {
-      titleHead: 'Experience',
+      titleHead: 'Work',
       title: 'Professional Experience',
       subtitle:
         'Provision of services to companies already consolidated in the market, with the development of complete platforms.',

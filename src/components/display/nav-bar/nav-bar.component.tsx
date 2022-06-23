@@ -109,18 +109,18 @@ export const NavBar = () => {
                     ))}
 
                     <LanguageSelector />
-                  </Box>
 
-                  <IconButton
-                    aria-label="Open Navigation"
-                    size="large"
-                    sx={{ display: { md: 'none' } }}
-                    onClick={handleDrawerToggle}
-                  >
-                    <Typography color="primary">
-                      <i className="fa fa-bars" />
-                    </Typography>
-                  </IconButton>
+                    <IconButton
+                      aria-label="Open Navigation"
+                      size="large"
+                      sx={{ display: { md: 'none' } }}
+                      onClick={handleDrawerToggle}
+                    >
+                      <Typography color="primary">
+                        <i className="fa fa-bars" />
+                      </Typography>
+                    </IconButton>
+                  </Box>
                 </Box>
               </Toolbar>
             </Container>

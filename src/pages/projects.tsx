@@ -171,7 +171,11 @@ const ProjectPage = () => {
                   >
                     <div>
                       {project.projectUrl ? (
-                        <Link href={project.projectUrl}>
+                        <a
+                          href={project.projectUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
                           <Typography
                             color="primary"
                             variant="h5"
@@ -179,7 +183,7 @@ const ProjectPage = () => {
                           >
                             {project.name}
                           </Typography>
-                        </Link>
+                        </a>
                       ) : (
                         <Typography color="primary" variant="h5">
                           {project.name}

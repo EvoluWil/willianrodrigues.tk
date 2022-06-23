@@ -2,7 +2,7 @@ export const navbar = {
   pt: {
     navbar: {
       home: 'Inicio',
-      work: 'Experiência',
+      work: 'Serviços',
       projects: 'Projetos',
       contact: 'Contato'
     }

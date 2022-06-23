@@ -36,6 +36,11 @@ export const Global: React.FC = () => {
         a {
           color: inherit;
           text-decoration: none;
+
+          &:hover {
+            text-decoration: underline;
+            text-decoration-color: ${theme.palette.primary.main};
+          }
         }
         .typewriter {
           font-size: ${theme.spacing(6)};
