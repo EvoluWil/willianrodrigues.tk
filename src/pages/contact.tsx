@@ -71,6 +71,7 @@ const Contact = () => {
               href="https://api.whatsapp.com/send?phone=5512982277740"
               rel="noreferrer"
               target="_blank"
+              style={{ textDecoration: 'none' }}
             >
               <ContactCard
                 icon="fa fa-whatsapp"
