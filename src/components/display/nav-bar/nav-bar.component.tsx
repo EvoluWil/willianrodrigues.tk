@@ -97,7 +97,7 @@ export const NavBar = () => {
                       >
                         <AnimatedLink
                           onClick={() => {
-                            setBackdrop(true);
+                            if (route !== item.link) setBackdrop(true);
                           }}
                           className={route === item.link ? 'active' : 'inative'}
                           key={item.name}
