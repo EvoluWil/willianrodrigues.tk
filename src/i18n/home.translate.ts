@@ -31,11 +31,11 @@ export const home = {
             'Emocional.',
             'Criatividade.',
             'Inteligência.',
-            'Proatividade',
-            'Paixão',
-            'Equipe',
-            'Dedicação',
-            'Auto-Gerenciamento'
+            'Proatividade.',
+            'Paixão.',
+            'Equipe.',
+            'Dedicação.',
+            'Auto-Gerenciamento.'
           ]
         }
       }
@@ -73,11 +73,11 @@ export const home = {
             'Emotional.',
             'Creativity.',
             'Intelligence.',
-            'Proactivity',
-            'love',
-            'Team',
-            'Dedication',
-            'Self-Management'
+            'Proactivity.',
+            'Love.',
+            'Team.',
+            'Dedication.',
+            'Self-Management.'
           ]
         }
       }
