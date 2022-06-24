@@ -30,7 +30,12 @@ export const home = {
             'Solução.',
             'Emocional.',
             'Criatividade.',
-            'Inteligencia.'
+            'Inteligência.',
+            'Proatividade',
+            'Paixão',
+            'Equipe',
+            'Dedicação',
+            'Auto-Gerenciamento'
           ]
         }
       }
@@ -67,7 +72,12 @@ export const home = {
             'Solution.',
             'Emotional.',
             'Creativity.',
-            'Intelligence.'
+            'Intelligence.',
+            'Proactivity',
+            'love',
+            'Team',
+            'Dedication',
+            'Self-Management'
           ]
         }
       }
