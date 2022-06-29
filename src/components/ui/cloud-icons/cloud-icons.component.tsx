@@ -12,6 +12,9 @@ const useIcons = (slugs: string[]) => {
   if (icons) {
     return Object.values(icons.simpleIcons).map(icon =>
       renderSimpleIcon({
+        bgHex: '#212121',
+        fallbackHex: '#707070',
+        minContrastRatio: 2,
         icon,
         size: 80,
         aProps: {
