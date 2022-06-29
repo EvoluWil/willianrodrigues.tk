@@ -6,7 +6,8 @@ import {
   ListItemText,
   Drawer,
   Divider,
-  Typography
+  Typography,
+  IconButton
 } from '@mui/material';
 import { useRouter } from 'next/router';
 import { Link } from '../../ui/link/link.component';
@@ -36,9 +37,23 @@ export default function NavigationDrawer(props: NavigationDrawerProps) {
           px: 1,
           minHeight: { xs: 48, sm: 64 }
         }}
-      ></Box>
+        bgcolor={theme => theme.palette.background.default}
+      >
+        <IconButton
+          color="primary"
+          sx={{ mr: 'auto', fontSize: 24 }}
+          onClick={onClose}
+        >
+          <i className="fa fa-angle-right" />
+        </IconButton>
+      </Box>
       <Divider />
-      <List>
+      <List
+        sx={{
+          bgcolor: theme => theme.palette.background.default,
+          height: '100vh'
+        }}
+      >
         {menuItems.map(item => (
           <Link key={item.name} href={item.link} onClick={onClose}>
             <Box

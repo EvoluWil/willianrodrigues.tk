@@ -18,7 +18,6 @@ import {
   CircularProgress
 } from '@mui/material/';
 import { shimmerUrlEffect } from '../utils/shimmer-url-effect.util';
-import { Link } from '../components/ui/link/link.component';
 import { StackIcon } from '../components/ui/stack-icons/stack-icons.component';
 import { Title } from '../components/ui/title/title.component';
 import { translate } from '../utils/translate.util';
@@ -148,10 +147,20 @@ const ProjectPage = () => {
                             component="a"
                             href={project.projectUrl}
                             rel="noopener"
-                            startIcon={<i className="fa fa-eye" />}
+                            startIcon={
+                              <i
+                                className={
+                                  project.isApp
+                                    ? 'fa fa-android'
+                                    : 'fa fa-globe'
+                                }
+                              />
+                            }
                             target="_blank"
                           >
-                            {translate('project.page')}
+                            {project.isApp
+                              ? 'Download'
+                              : translate('project.page')}
                           </Button>
                         )}
                       </ButtonGroup>
@@ -170,7 +179,29 @@ const ProjectPage = () => {
                     }}
                   >
                     <div>
-                      {project.projectUrl ? (
+                      <Typography color="primary" variant="h5" component="span">
+                        {project.name}
+                      </Typography>
+
+                      {!!project.projectUrl && (
+                        <a
+                          href={project.repoUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          <Typography
+                            color="primary"
+                            variant="h5"
+                            component="span"
+                            mx={1}
+                            sx={{ cursor: 'pointer' }}
+                          >
+                            <i className="fa fa-github" />
+                          </Typography>
+                        </a>
+                      )}
+
+                      {!!project.projectUrl && (
                         <a
                           href={project.projectUrl}
                           target="_blank"
@@ -179,16 +210,27 @@ const ProjectPage = () => {
                           <Typography
                             color="primary"
                             variant="h5"
+                            component="span"
                             sx={{ cursor: 'pointer' }}
                           >
-                            {project.name}
+                            <i
+                              className={
+                                project.isApp ? 'fa fa-android' : 'fa fa-globe'
+                              }
+                            />
                           </Typography>
                         </a>
-                      ) : (
-                        <Typography color="primary" variant="h5">
-                          {project.name}
+                      )}
+                      {!!project.credentials && (
+                        <Typography
+                          color="primary"
+                          variant="caption"
+                          component="p"
+                        >
+                          {project.credentials}
                         </Typography>
                       )}
+
                       <Typography
                         color="textSecondary"
                         component="p"

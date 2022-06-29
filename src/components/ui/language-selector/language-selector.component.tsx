@@ -49,7 +49,10 @@ export const LanguageSelector = () => {
 
       <Menu
         keepMounted
-        PaperProps={{ style: { width: '144px' } }}
+        PaperProps={{
+          style: { width: '144px' },
+          sx: { bgcolor: theme => theme.palette.background.default }
+        }}
         anchorEl={anchorEl}
         id="language-menu"
         open={Boolean(anchorEl)}

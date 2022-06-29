@@ -3,7 +3,7 @@ import { styled } from '@mui/material/styles';
 
 export const TextFieldStyled = styled(TextField)`
   .MuiOutlinedInput-root {
-    background: ${({ theme }) => theme.palette.grey[900]};
+    background: ${({ theme }) => theme.palette.background.paper};
   }
   .MuiInputLabel-root {
     color: ${({ theme }) => theme.palette.text.primary};

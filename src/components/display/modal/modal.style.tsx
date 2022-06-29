@@ -9,7 +9,7 @@ export const ModalStyled = styled(Modal)`
 
 export const ModalContainer = styled('div')`
   position: relative;
-  background-color: ${({ theme }) => theme.palette.background.paper};
+  background-color: ${({ theme }) => theme.palette.grey[800]};
   display: grid;
   grid-template-columns: 1fr;
   align-items: center;

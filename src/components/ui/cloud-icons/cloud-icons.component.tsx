@@ -32,7 +32,24 @@ const slugs = Object.values(StacksIcons).map(({ label }) =>
 
 const CloudIcons = () => {
   const icons: any = useIcons(slugs);
-  return <Cloud>{icons}</Cloud>;
+  return (
+    <Cloud
+      options={{
+        reverse: true,
+        depth: 1,
+        wheelZoom: false,
+        imageScale: 1,
+        activeCursor: 'default',
+        tooltip: 'native',
+        initial: [0.1, -0.1],
+        clickToFront: 500,
+        tooltipDelay: 0,
+        outlineColour: '#0000'
+      }}
+    >
+      {icons}
+    </Cloud>
+  );
 };
 
 export default CloudIcons;

@@ -14,6 +14,7 @@ export const work = {
           src: '/images/works/econdos.webp',
           occupation: 'Desenvolvedor FullStack Jr',
           period: 'jun/2021 - Atual',
+          page: 'https://econdos.com.br/',
           tasks: [
             'Desenvolver e dar manutenção em aplicações web/mobile',
             'Novas funcionalidades',
@@ -38,6 +39,7 @@ export const work = {
           src: '/images/works/efone.png',
           occupation: 'Desenvolvedor React-Native',
           period: 'jan/2022 - mai/2022',
+          page: 'https://play.google.com/store/apps/details?id=com.efone',
           tasks: [
             'Desenvolver aplicação mobile de chamadas voip',
             'Integração com procolo SIP',
@@ -62,6 +64,7 @@ export const work = {
           src: '/images/works/assejus.png',
           occupation: 'Desenvolvedor FullStack',
           period: 'fev/2022 - mai/2022',
+          page: 'https://assejusonline.com.br',
           tasks: [
             'Desenvolver aplicação web',
             'Integração storage firebase',
@@ -88,6 +91,7 @@ export const work = {
           src: '/images/works/marina.png',
           occupation: 'Desenvolvedor FullStack',
           period: 'fev/2022 - abr/2022',
+          page: 'https://agenda.marinamaremansa.com.br',
           tasks: [
             'Desenvolver aplicação web',
             'Protótipo e Identidade visual',

@@ -23,12 +23,7 @@ const WorkPage = () => {
       <Head>
         <title>{translate('work.titleHead')} | Willian Rodrigues</title>
       </Head>
-      <Box
-        my={4}
-        sx={{
-          bgcolor: theme => theme.palette.background.default
-        }}
-      >
+      <Box my={4}>
         <Container>
           <Grid container spacing={2} mb={4}>
             <Grid
@@ -72,7 +67,7 @@ const WorkPage = () => {
             borderRadius={4}
             p={4}
             sx={{
-              bgcolor: theme => theme.palette.grey[900]
+              bgcolor: theme => theme.palette.background.paper
             }}
           >
             <Grid item xs={12} md={6} component="section">

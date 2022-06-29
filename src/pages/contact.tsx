@@ -21,8 +21,7 @@ const Contact = () => {
       <ContactModal open={contact} setOpen={() => setContact(false)} />
       <Box
         sx={{
-          py: 4,
-          bgcolor: theme => theme.palette.background.default
+          py: 4
         }}
       >
         <Container>

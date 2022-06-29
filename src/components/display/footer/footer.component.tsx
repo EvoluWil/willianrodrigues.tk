@@ -17,7 +17,11 @@ export const Footer = () => {
   return (
     <Box
       component="footer"
-      sx={{ py: 3, bgcolor: theme => theme.palette.grey[900], mt: 'auto' }}
+      sx={{
+        py: 3,
+        bgcolor: theme => theme.palette.background.paper,
+        mt: 'auto'
+      }}
     >
       <Container>
         <Box

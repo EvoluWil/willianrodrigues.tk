@@ -6,4 +6,5 @@ export const SocialButtonContainer = styled('a')`
   justify-content: center;
   font-size: 40px;
   color: ${({ theme }) => theme.palette.primary.main};
+  text-decoration: none !important;
 `;

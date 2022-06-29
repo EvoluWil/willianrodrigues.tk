@@ -1,4 +1,5 @@
 export interface Work {
+  page: string;
   name: string;
   src: string;
   occupation: string;

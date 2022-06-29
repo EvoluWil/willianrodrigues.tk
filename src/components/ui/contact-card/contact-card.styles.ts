@@ -22,7 +22,7 @@ export const ContactCardContainer = styled(Box)`
   cursor: pointer;
   transition: background-color 0.5s;
   &:hover {
-    background-color: ${({ theme }) => theme.palette.grey[900]};
+    background-color: rgba(80, 80, 80, 0.5);
   }
 `;
 

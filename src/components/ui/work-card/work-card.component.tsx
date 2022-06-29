@@ -16,9 +16,17 @@ export const WorkCard: React.FC<WorkCardProps> = ({
 }) => {
   return (
     <WorkCardContainer>
-      <Typography color="primary" variant="h4">
-        {work.name}
-      </Typography>
+      <a
+        href={work.page}
+        style={{ cursor: 'pointer' }}
+        rel="noreferrer"
+        target="_blank"
+      >
+        <Typography color="primary" variant="h4" sx={{ cursor: 'pointer' }}>
+          <i className="fa fa-globe" style={{ marginRight: '4px' }} />
+          {work.name}
+        </Typography>
+      </a>
       <Typography
         variant="h6"
         component="p"

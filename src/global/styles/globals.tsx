@@ -18,7 +18,6 @@ export const Global: React.FC = () => {
         body {
           cursor: arrow;
           color: ${theme.palette.text.primary};
-          background: ${theme.palette.background.default};
         }
 
         body,
@@ -47,19 +46,19 @@ export const Global: React.FC = () => {
           color: ${theme.palette.primary.main};
         }
         ._34Oew ._22mst {
-          background-color: ${theme.palette.background.paper} !important;
+          background-color: ${theme.palette.background.default} !important;
           textarea {
-            border-color: ${theme.palette.background.default} !important;
-            background-color: ${theme.palette.background.paper} !important;
+            border-color: #121212 !important;
+            background-color: ${theme.palette.background.default} !important;
             color: ${theme.palette.text.primary} !important;
           }
         }
         ._34Oew ._1jTF6._3sodH {
-          background: ${theme.palette.background.default};
+          background: #121212;
           border: 1px solid ${theme.palette.primary.main};
         }
         ._34Oew ._1jTF6._3sodH ._uThfQ {
-          background: ${theme.palette.background.paper};
+          background: ${theme.palette.background.default};
         }
       `}
     />

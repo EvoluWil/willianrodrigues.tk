@@ -1,10 +1,10 @@
-import { Box, ThemeProvider } from '@mui/material';
+import { ThemeProvider } from '@mui/material';
 import type { AppProps } from 'next/app';
-import { useRouter } from 'next/router';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { Footer } from '../components/display/footer/footer.component';
 import { NavBar } from '../components/display/nav-bar/nav-bar.component';
+import { DancingLines } from '../components/ui/dancing-lines/dancing-lines.dynamic';
 import { WhatsappFloatButton } from '../components/ui/whatsapp-float/whatsapp-float.dynamic';
 import { Global } from '../global/styles/globals';
 import theme from '../global/styles/theme';
@@ -22,8 +22,9 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
         <NavBar />
         <Component {...pageProps} />
         <Footer />
-        <WhatsappFloatButton />
       </AppContainer>
+      <WhatsappFloatButton />
+      <DancingLines />
     </ThemeProvider>
   );
 };

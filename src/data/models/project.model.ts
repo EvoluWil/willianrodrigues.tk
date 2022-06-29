@@ -1,4 +1,5 @@
 export interface Project {
+  isApp?: boolean;
   id: number;
   name: string;
   projectUrl?: string;
@@ -7,4 +8,5 @@ export interface Project {
   description: string;
   stacks: string[];
   tasks: string[];
+  credentials?: string;
 }

@@ -23,7 +23,7 @@ export const home = {
           description1:
             'Minha experiência em liderança de equipe e suporte ao cliente, complementa minha visão de negócio e o entendimento de valor para o negócio.',
           description2:
-            'Gerenciamento de tarefas baseado em metologias ágeis (scrum), e forte trabalho coletivo me torna uma peça importante em qualquer equipe.',
+            'Gerenciamento de tarefas baseado em metodologias ágeis (scrum), e forte trabalho coletivo me torna uma peça importante em qualquer equipe.',
           skills: [
             'Colaboração.',
             'Adaptabilidade.',

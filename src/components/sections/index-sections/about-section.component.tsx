@@ -11,7 +11,7 @@ export const About = () => {
       <Box
         sx={{
           py: 4,
-          bgcolor: theme => theme.palette.grey[900]
+          bgcolor: theme => theme.palette.background.paper
         }}
       >
         <Container>
@@ -23,8 +23,7 @@ export const About = () => {
                 xs: '100%',
                 md: '95vh'
               },
-              py: 4,
-              bgcolor: theme => theme.palette.grey[900]
+              py: 4
             }}
           >
             <Grid
@@ -75,11 +74,7 @@ export const About = () => {
           </Grid>
         </Container>
       </Box>
-      <Box
-        sx={{
-          bgcolor: theme => theme.palette.background.default
-        }}
-      >
+      <Box>
         <Container>
           <Grid
             container

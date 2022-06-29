@@ -6,7 +6,7 @@ export const project = {
       subtitle:
         'Aqui exponho meus principais projetos acadêmicos e pessoais que estão "Open Source" no github',
       repository: 'Repositório',
-      page: 'Ver',
+      page: 'Navegar',
       button1: 'Ver no GitHub',
       button2: 'Fale comigo',
       projects: [
@@ -15,6 +15,8 @@ export const project = {
           name: 'Target CRM',
           src: '/images/projects/target.png',
           projectUrl: 'https://targetcrm.vercel.app/',
+          credentials:
+            'Usuário de teste: (Email: admin@admin.com, Senha: password)',
           repoUrl: 'https://github.com/vinicius-hso/api-sem3-target-crm',
           description: `TARGET é um projeto acadêmico, onde desenvolvemos uma Aplicação Web de CRM (Customer Relationship Management) para organização dos processos comerciais, oferecendo suporte adequado às áreas de vendas e negócios para a empresa parceira da universidade (Ionic Heath). Minha atuação neste projeto foi como TechLead Frontend, onde fiquei responsável pelo design, tecnologias, subdivisão de tarefas e principal desenvolvedor frontend`,
           tasks: [
@@ -38,6 +40,7 @@ export const project = {
           id: 2,
           name: 'eSoja',
           src: '/images/projects/esoja.png',
+          isApp: true,
           projectUrl:
             'https://firebasestorage.googleapis.com/v0/b/esoja-345711.appspot.com/o/app-release.apk?alt=media&token=51dbad93-cbbd-4cf2-a889-aad05425eddd',
           repoUrl:
@@ -116,6 +119,8 @@ export const project = {
         {
           id: 1,
           name: 'Target CRM',
+          credentials:
+            'Test user: (Email: admin@admin.com, Password: password)',
           src: '/images/projects/target.png',
           projectUrl: 'https://targetcrm.vercel.app/',
           repoUrl: 'https://github.com/vinicius-hso/api-sem3-target-crm',
@@ -141,6 +146,7 @@ export const project = {
           id: 2,
           name: 'eSoja',
           src: '/images/projects/esoja.png',
+          isApp: true,
           projectUrl:
             'https://firebasestorage.googleapis.com/v0/b/esoja-345711.appspot.com/o/app-release.apk?alt=media&token=51dbad93-cbbd-4cf2-a889-aad05425eddd',
           repoUrl:
