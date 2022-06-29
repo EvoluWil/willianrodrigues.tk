@@ -26,7 +26,7 @@ export const SoftSkills: React.FC<SoftSkillsProps> = ({ skills }) => {
       justifyContent="center"
       textAlign="center"
     >
-      <TagCloud minSize={16} maxSize={48} tags={[...data]} />
+      <TagCloud minSize={16} maxSize={40} tags={[...data]} />
     </Box>
   );
 };
