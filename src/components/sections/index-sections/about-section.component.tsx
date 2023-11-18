@@ -1,9 +1,9 @@
-import { Container, Typography, Grid, Box } from '@mui/material/';
-import { Typewriter } from '../../ui/typewriter/typewriter.component';
-import { Title } from '../../ui/title/title.component';
-import { SoftSkills } from '../../ui/soft-skills/soft-skills.component';
-import { translate } from '../../../utils/translate.util';
-import { CloudIcons } from '../../ui/cloud-icons/cloud-icons.dynamic';
+import { Container, Typography, Grid, Box } from "@mui/material/";
+import { Typewriter } from "../../ui/typewriter/typewriter.component";
+import { Title } from "../../ui/title/title.component";
+import { SoftSkills } from "../../ui/soft-skills/soft-skills.component";
+import { translate } from "../../../utils/translate.util";
+import { CloudIcons } from "../../ui/cloud-icons/cloud-icons.dynamic";
 
 export const About = () => {
   return (
@@ -11,7 +11,7 @@ export const About = () => {
       <Box
         sx={{
           py: 4,
-          bgcolor: theme => theme.palette.background.paper
+          bgcolor: (theme) => theme.palette.background.paper,
         }}
       >
         <Container>
@@ -20,10 +20,10 @@ export const About = () => {
             spacing={2}
             sx={{
               minHeight: {
-                xs: '100%',
-                md: '95vh'
+                xs: "100%",
+                md: "95vh",
               },
-              py: 4
+              py: 4,
             }}
           >
             <Grid
@@ -32,27 +32,23 @@ export const About = () => {
               md={6}
               component="section"
               sx={{
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'space-between'
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "space-between",
               }}
             >
               <div>
                 <Title
-                  title={translate('home.aboutData.hardSkills.title')}
+                  title={translate("home.aboutData.hardSkills.title")}
                   subtitle={
-                    <Typography variant="h6" component="span">
-                      {translate('home.aboutData.hardSkills.description')}
+                    <Typography variant="body2" component="span">
+                      {translate("home.aboutData.hardSkills.description")}
                     </Typography>
                   }
                 />
-                <Box sx={{ display: { md: 'flex', xs: 'none' } }}>
+                <Box sx={{ display: { md: "flex", xs: "none" } }}>
                   <Typewriter
-                    words={
-                      translate(
-                        'home.aboutData.hardSkills.Typewriter'
-                      ) as unknown as string[]
-                    }
+                    words={translate("home.aboutData.hardSkills.Typewriter")}
                   />
                 </Box>
               </div>
@@ -63,10 +59,10 @@ export const About = () => {
               md={6}
               component="section"
               sx={{
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                flexWrap: 'wrap'
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                flexWrap: "wrap",
               }}
             >
               <CloudIcons />
@@ -82,15 +78,15 @@ export const About = () => {
             display="flex"
             justifyContent="center"
             flexDirection={{
-              xs: 'column-reverse',
-              md: 'row'
+              xs: "column-reverse",
+              md: "row",
             }}
             sx={{
               minHeight: {
-                xs: '60vh',
-                md: '95vh'
+                xs: "60vh",
+                md: "95vh",
               },
-              py: 4
+              py: 4,
             }}
           >
             <Grid
@@ -99,18 +95,14 @@ export const About = () => {
               md={6}
               component="section"
               sx={{
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                flexWrap: 'wrap'
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                flexWrap: "wrap",
               }}
             >
               <SoftSkills
-                skills={
-                  translate(
-                    'home.aboutData.softSkills.skills'
-                  ) as unknown as string[]
-                }
+                skills={translate("home.aboutData.softSkills.skills")}
               />
             </Grid>
             <Grid
@@ -119,21 +111,21 @@ export const About = () => {
               md={6}
               component="section"
               sx={{
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'space-between'
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "space-between",
               }}
             >
               <Title
-                title={translate('home.aboutData.softSkills.title')}
+                title={translate("home.aboutData.softSkills.title")}
                 subtitle={
                   <>
-                    <Typography variant="h6" component="span">
-                      {translate('home.aboutData.softSkills.description1')}
+                    <Typography variant="body2" component="span">
+                      {translate("home.aboutData.softSkills.description1")}
                     </Typography>
                     <br />
-                    <Typography variant="h6" component="span">
-                      {translate('home.aboutData.softSkills.description2')}
+                    <Typography variant="body2" component="span">
+                      {translate("home.aboutData.softSkills.description2")}
                     </Typography>
                   </>
                 }

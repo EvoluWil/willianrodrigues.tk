@@ -1,5 +1,5 @@
-import Image from 'next/image';
-import { GetStaticProps } from 'next';
+import Image from "next/image";
+import { GetStaticProps } from "next";
 
 import {
   Box,
@@ -15,16 +15,16 @@ import {
   ButtonGroup,
   Button,
   Backdrop,
-  CircularProgress
-} from '@mui/material/';
-import { shimmerUrlEffect } from '../utils/shimmer-url-effect.util';
-import { StackIcon } from '../components/ui/stack-icons/stack-icons.component';
-import { Title } from '../components/ui/title/title.component';
-import { translate } from '../utils/translate.util';
-import Head from 'next/head';
-import { useRouter } from 'next/router';
-import { useState } from 'react';
-import { Project } from '../data/models/project.model';
+  CircularProgress,
+} from "@mui/material/";
+import { shimmerUrlEffect } from "../utils/shimmer-url-effect.util";
+import { StackIcon } from "../components/ui/stack-icons/stack-icons.component";
+import { Title } from "../components/ui/title/title.component";
+import { translate } from "../utils/translate.util";
+import Head from "next/head";
+import { useRouter } from "next/router";
+import { useState } from "react";
+import { Project } from "../data/models/project.model";
 
 const ProjectPage = () => {
   const { push } = useRouter();
@@ -38,10 +38,10 @@ const ProjectPage = () => {
   return (
     <>
       <Head>
-        <title>{translate('project.titleHead')} | Willian Rodrigues</title>
+        <title>{translate("project.titleHead")} | Willian Rodrigues</title>
       </Head>
       <Backdrop
-        sx={{ color: '#fff', zIndex: theme => theme.zIndex.drawer + 1 }}
+        sx={{ color: "#fff", zIndex: (theme) => theme.zIndex.drawer + 1 }}
         open={backdrop}
       >
         <CircularProgress color="inherit" />
@@ -50,55 +50,55 @@ const ProjectPage = () => {
         <Container>
           <Title
             sx={{ mb: 2 }}
-            title={translate('project.title')}
-            subtitle={translate('project.subtitle')}
+            title={translate("project.title")}
+            subtitle={translate("project.subtitle")}
           />
           <Grid container spacing={2} mb={4}>
-            <Grid item ml={{ md: 0, xs: 'auto' }}>
+            <Grid item ml={{ md: 0, xs: "auto" }}>
               <Button
                 color="primary"
-                href="https://github.com/Willian-Rodrigues?tab=repositories"
+                href="https://github.com/EvoluWil?tab=repositories"
                 size="large"
                 variant="contained"
                 target="_blank"
               >
-                {translate('project.button1')}
+                {translate("project.button1")}
               </Button>
             </Grid>
-            <Grid item mr={{ md: 0, xs: 'auto' }}>
+            <Grid item mr={{ md: 0, xs: "auto" }}>
               <Button
                 color="primary"
-                onClick={() => handleNavigation('/contact')}
+                onClick={() => handleNavigation("/contact")}
                 size="large"
                 variant="outlined"
               >
-                {translate('project.button2')}
+                {translate("project.button2")}
               </Button>
             </Grid>
           </Grid>
 
           <Grid container spacing={4}>
-            {translate('project.projects').map((project: Project) => (
+            {translate("project.projects").map((project: Project) => (
               <Grid key={project.id} item lg={12} sm={6} xs={12}>
                 <Card
                   elevation={4}
                   sx={{
-                    display: 'flex',
-                    height: '100%',
+                    display: "flex",
+                    height: "100%",
                     flexDirection: {
-                      xs: 'column',
-                      lg: 'row'
-                    }
+                      xs: "column",
+                      lg: "row",
+                    },
                   }}
                 >
                   <Box
                     sx={{
-                      display: 'flex',
-                      flexDirection: 'column',
-                      position: 'relative',
+                      display: "flex",
+                      flexDirection: "column",
+                      position: "relative",
                       flex: {
-                        lg: '1 1 600px'
-                      }
+                        lg: "1 1 600px",
+                      },
                     }}
                   >
                     <Box p={2}>
@@ -116,18 +116,18 @@ const ProjectPage = () => {
 
                     <Box
                       sx={{
-                        position: 'absolute',
-                        width: '100%',
-                        height: '100%',
-                        display: 'flex',
-                        justifyContent: 'center',
-                        alignItems: 'center',
-                        backgroundColor: 'rgba(0, 0, 0, 0.7);',
+                        position: "absolute",
+                        width: "100%",
+                        height: "100%",
+                        display: "flex",
+                        justifyContent: "center",
+                        alignItems: "center",
+                        backgroundColor: "rgba(0, 0, 0, 0.7);",
                         opacity: 0,
-                        transition: 'all 0.3s ease-in-out',
-                        '&:hover': {
-                          opacity: 1
-                        }
+                        transition: "all 0.3s ease-in-out",
+                        "&:hover": {
+                          opacity: 1,
+                        },
                       }}
                     >
                       <ButtonGroup variant="contained">
@@ -139,7 +139,7 @@ const ProjectPage = () => {
                           startIcon={<i className="fa fa-github" />}
                           target="_blank"
                         >
-                          {translate('project.repository')}
+                          {translate("project.repository")}
                         </Button>
                         {!!project.projectUrl && (
                           <Button
@@ -151,16 +151,16 @@ const ProjectPage = () => {
                               <i
                                 className={
                                   project.isApp
-                                    ? 'fa fa-android'
-                                    : 'fa fa-globe'
+                                    ? "fa fa-android"
+                                    : "fa fa-globe"
                                 }
                               />
                             }
                             target="_blank"
                           >
                             {project.isApp
-                              ? 'Download'
-                              : translate('project.page')}
+                              ? "Download"
+                              : translate("project.page")}
                           </Button>
                         )}
                       </ButtonGroup>
@@ -169,13 +169,13 @@ const ProjectPage = () => {
 
                   <CardContent
                     sx={{
-                      display: 'flex',
-                      flexDirection: 'column',
-                      justifyContent: 'space-between',
-                      height: '100%',
+                      display: "flex",
+                      flexDirection: "column",
+                      justifyContent: "space-between",
+                      height: "100%",
                       width: {
-                        lg: '80%'
-                      }
+                        lg: "80%",
+                      },
                     }}
                   >
                     <div>
@@ -194,7 +194,7 @@ const ProjectPage = () => {
                             variant="h5"
                             component="span"
                             mx={1}
-                            sx={{ cursor: 'pointer' }}
+                            sx={{ cursor: "pointer" }}
                           >
                             <i className="fa fa-github" />
                           </Typography>
@@ -211,11 +211,11 @@ const ProjectPage = () => {
                             color="primary"
                             variant="h5"
                             component="span"
-                            sx={{ cursor: 'pointer' }}
+                            sx={{ cursor: "pointer" }}
                           >
                             <i
                               className={
-                                project.isApp ? 'fa fa-android' : 'fa fa-globe'
+                                project.isApp ? "fa fa-android" : "fa fa-globe"
                               }
                             />
                           </Typography>
@@ -242,17 +242,17 @@ const ProjectPage = () => {
                       <List
                         dense
                         sx={{
-                          display: 'flex',
-                          flexWrap: 'wrap',
-                          '& > *': {
+                          display: "flex",
+                          flexWrap: "wrap",
+                          "& > *": {
                             flex: {
-                              xs: '0 0 100%',
-                              lg: '0 0 50%'
-                            }
-                          }
+                              xs: "0 0 100%",
+                              lg: "0 0 50%",
+                            },
+                          },
                         }}
                       >
-                        {project.tasks.map(task => (
+                        {project.tasks.map((task) => (
                           <ListItem key={task}>
                             <ListItemIcon sx={{ minWidth: 34 }}>
                               <Typography color="primary">
@@ -269,9 +269,9 @@ const ProjectPage = () => {
                       display="flex"
                       mx="auto"
                       gap={1}
-                      sx={{ flexWrap: 'wrap' }}
+                      sx={{ flexWrap: "wrap" }}
                     >
-                      {project.stacks.map(stack => (
+                      {project.stacks.map((stack) => (
                         <Typography
                           variant="h4"
                           component="span"
@@ -298,6 +298,6 @@ export default ProjectPage;
 export const getStaticProps: GetStaticProps = async () => {
   return {
     props: {},
-    revalidate: 60 * 60 * 24 * 7 // 7 dias
+    revalidate: 60 * 60 * 24 * 7, // 7 dias
   };
 };

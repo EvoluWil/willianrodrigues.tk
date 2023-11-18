@@ -1,4 +1,4 @@
-import { StacksIcons } from '../../../data/constants/stack-icons.constant';
+import { StacksIcons } from "../../../data/constants/stack-icons.constant";
 
 interface IconFunctionProps {
   stack: string;

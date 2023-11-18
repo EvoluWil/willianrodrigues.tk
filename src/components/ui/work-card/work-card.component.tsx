@@ -1,7 +1,7 @@
-import { Box, List, ListItem, ListItemIcon, Typography } from '@mui/material';
-import { Work } from '../../../data/models/work.model';
-import { StackIcon } from '../stack-icons/stack-icons.component';
-import { WorkCardContainer } from './work-card.styles';
+import { Box, List, ListItem, ListItemIcon, Typography } from "@mui/material";
+import { Work } from "../../../data/models/work.model";
+import { StackIcon } from "../stack-icons/stack-icons.component";
+import { WorkCardContainer } from "./work-card.styles";
 
 interface WorkCardProps {
   work: Work;
@@ -12,18 +12,18 @@ interface WorkCardProps {
 export const WorkCard: React.FC<WorkCardProps> = ({
   work,
   responsibilitiesLabel,
-  technologiesLabel
+  technologiesLabel,
 }) => {
   return (
     <WorkCardContainer>
       <a
         href={work.page}
-        style={{ cursor: 'pointer' }}
+        style={{ cursor: "pointer" }}
         rel="noreferrer"
         target="_blank"
       >
-        <Typography color="primary" variant="h4" sx={{ cursor: 'pointer' }}>
-          <i className="fa fa-globe" style={{ marginRight: '4px' }} />
+        <Typography color="primary" variant="h4" sx={{ cursor: "pointer" }}>
+          <i className="fa fa-globe" style={{ marginRight: "4px" }} />
           {work.name}
         </Typography>
       </a>
@@ -40,9 +40,9 @@ export const WorkCard: React.FC<WorkCardProps> = ({
         {responsibilitiesLabel}
       </Typography>
       <List>
-        {work.tasks.map(task => (
+        {work.tasks.map((task) => (
           <ListItem disablePadding key={task}>
-            <ListItemIcon sx={{ color: theme => theme.palette.primary.main }}>
+            <ListItemIcon sx={{ color: (theme) => theme.palette.primary.main }}>
               <i className="fa fa-check" />
             </ListItemIcon>
             <Typography variant="caption" sx={{ my: 0.5 }}>
@@ -54,8 +54,8 @@ export const WorkCard: React.FC<WorkCardProps> = ({
       <Typography color="primary" variant="h6" sx={{ mt: 4, mb: 2 }}>
         {technologiesLabel}
       </Typography>
-      <Box display="flex" gap={1} sx={{ flexWrap: 'wrap' }}>
-        {work.stacks.map(stack => (
+      <Box display="flex" gap={1} sx={{ flexWrap: "wrap" }}>
+        {work.stacks.map((stack) => (
           <Typography variant="h4" component="span" key={stack} color="primary">
             <StackIcon stack={stack} />
           </Typography>
