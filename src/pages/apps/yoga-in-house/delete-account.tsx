@@ -6,16 +6,37 @@ import Grid from '@mui/material/Grid';
 import Link from '@mui/material/Link';
 import TextField from '@mui/material/TextField';
 import Typography from '@mui/material/Typography';
-import * as React from 'react';
+import axios from 'axios';
+import { useRouter } from 'next/router';
+import { useState } from 'react';
+import { toast } from 'react-toastify';
 
 export default function DeleteAccount() {
-  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+  const [loading, setLoading] = useState(false);
+
+  const { push } = useRouter();
+
+  const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     const data = new FormData(event.currentTarget);
-    console.log({
-      email: data.get('email'),
-      password: data.get('password'),
-    });
+
+    setLoading(true);
+    try {
+      await axios.post(
+        'https://yoga-in-house-api.vercel.app/api/v1/auth/user/delete-account',
+        {
+          email: data.get('email'),
+          password: data.get('password'),
+        },
+      );
+
+      toast.success('Conta removida com sucesso');
+      push('/');
+    } catch (error) {
+      toast.error('Erro ao remover conta');
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -68,8 +89,11 @@ export default function DeleteAccount() {
             fullWidth
             variant="contained"
             sx={{ mt: 3, mb: 2 }}
+            disabled={loading}
           >
-            <Typography color="white">Confirmar e remover conta</Typography>
+            <Typography color="white">
+              {loading ? 'Removendo conta...' : 'Confirmar e remover conta'}
+            </Typography>
           </Button>
           <Grid container>
             <Grid item xs>
