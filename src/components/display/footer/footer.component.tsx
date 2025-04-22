@@ -66,7 +66,7 @@ export const Footer = () => {
             <Typography variant={"h6"}>{translate("footer.follow")}</Typography>
             <Box alignItems="center" display="flex" gap={1}>
               <SocialButton
-                url="https://www.linkedin.com/in/willianrsilva/"
+                url="https://www.linkedin.com/in/evoluwill/"
                 icon="linkedin-square"
               />
               <SocialButton url="https://github.com/EvoluWil" icon="github" />
