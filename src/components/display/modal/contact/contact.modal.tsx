@@ -1,20 +1,20 @@
+import { yupResolver } from '@hookform/resolvers/yup';
+import { Button, CircularProgress } from '@mui/material';
+import axios from 'axios';
 import React, { useState } from 'react';
 import { FieldValues, useForm } from 'react-hook-form';
-import { yupResolver } from '@hookform/resolvers/yup';
+import { toast } from 'react-toastify';
 import * as yup from 'yup';
+import { translate } from '../../../../utils/translate.util';
 import { TextField } from '../../../ui/text-field/text-field.component';
+import { Title } from '../../../ui/title/title.component';
 import {
   ButtonsContainer,
   CloseButtonStyled,
   ModalContainer,
   ModalStyled,
-  TwoColumnsContainer
+  TwoColumnsContainer,
 } from '../modal.style';
-import { Button, CircularProgress } from '@mui/material';
-import { Title } from '../../../ui/title/title.component';
-import axios from 'axios';
-import { toast } from 'react-toastify';
-import { translate } from '../../../../utils/translate.util';
 
 interface ContactModalProps {
   open: boolean;
@@ -31,20 +31,20 @@ const sendEmail = yup.object().shape({
     .required(translate('contact.email.modal.subject.required')),
   message: yup
     .string()
-    .required(translate('contact.email.modal.message.required'))
+    .required(translate('contact.email.modal.message.required')),
 });
 
 export const ContactModal: React.FC<ContactModalProps> = ({
   open,
-  setOpen
+  setOpen,
 }) => {
   const [loading, setLoading] = useState(false);
   const {
     control,
     handleSubmit,
-    formState: { errors }
+    formState: { errors },
   } = useForm({
-    resolver: yupResolver(sendEmail)
+    resolver: yupResolver(sendEmail),
   });
 
   const handleClose = () => {
@@ -84,7 +84,7 @@ export const ContactModal: React.FC<ContactModalProps> = ({
           icon="user"
           size="small"
           control={control}
-          helperText={errors?.name?.message}
+          helperText={errors?.name?.message as string}
           error={!!errors?.name}
           name={'name'}
           variant={'outlined'}
@@ -96,7 +96,7 @@ export const ContactModal: React.FC<ContactModalProps> = ({
           icon="envelope"
           size="small"
           control={control}
-          helperText={errors?.email?.message}
+          helperText={errors?.email?.message as string}
           error={!!errors?.email}
           name={'email'}
           variant={'outlined'}
@@ -109,7 +109,7 @@ export const ContactModal: React.FC<ContactModalProps> = ({
         icon="car"
         size="small"
         control={control}
-        helperText={errors?.subject?.message}
+        helperText={errors?.subject?.message as string}
         error={!!errors?.subject}
         name={'subject'}
         variant={'outlined'}
@@ -120,7 +120,7 @@ export const ContactModal: React.FC<ContactModalProps> = ({
         placeholder={translate('contact.email.modal.message.placeholder')}
         size="small"
         control={control}
-        helperText={errors?.message?.message}
+        helperText={errors?.message?.message as string}
         error={!!errors?.message}
         name={'message'}
         variant={'outlined'}
